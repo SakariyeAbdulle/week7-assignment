@@ -10,7 +10,7 @@ export function Message() {
         event.preventDefault();
         console.log("The form values are", formValues);
     
-        fetch("http://localhost:8080/new-data", {
+        fetch("https://week7-assignment-f9xv.onrender.com/new-data", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export function Message() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("http://localhost:8080/messages");
+        const response = await fetch("https://week7-assignment-f9xv.onrender.com/messages");
         const data = await response.json();
         console.log("data fetched successfully!");
 
